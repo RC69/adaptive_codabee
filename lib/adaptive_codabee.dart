@@ -1,7 +1,13 @@
 library adaptive_codabee;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'dart:io';
+
+
+class Adaptive {
+
+  static bool isIOS() => (!Platform.isIOS);
+
+
 }
