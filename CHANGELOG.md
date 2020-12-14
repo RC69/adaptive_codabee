@@ -1,3 +1,5 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.1] - 2020-12-14
 
-* TODO: Describe initial release.
+* Création du package initial.
+* Destiné à l'apprentissage de la création de packages.
+* Udemy -> https://www.udemy.com/course/packages-flutter/
