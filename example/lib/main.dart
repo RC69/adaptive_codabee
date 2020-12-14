@@ -32,21 +32,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'Notre app tourne sous IOS: ${Adaptive.isIOS()}',
-            ),
-          ],
-        ),
-      ),
-      // This trailing comma makes auto-formatting nicer for build methods.
-    );
+    return Adaptive.scaffold(
+        string: "Test",
+        body: Center(child: Adaptive.text(string: "${Adaptive.isIOS()}", color: Colors.pink)));
   }
 }
