@@ -21,3 +21,7 @@ Dans le fichier Dart, importer:
 ```dart
 import 'package:adaptive_codabee_rc/adaptive_codabee.dart';
 ```
+
+## -- FOR TEST -- Do not use -- Udemy course --
+## -- FOR TEST -- Do not use -- Udemy course --
+## -- FOR TEST -- Do not use -- Udemy course --
