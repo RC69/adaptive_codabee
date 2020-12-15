@@ -8,7 +8,7 @@ import 'dart:io';
 class Adaptive {
 
   // Check Platform
-  static bool isIOS() => (!Platform.isIOS);
+  static bool isIOS() => (Platform.isIOS);
 
   // Material Design Adapted
   static Widget scaffold({@required String string, @required Widget body}) {
@@ -22,6 +22,17 @@ class Adaptive {
     return (isIOS())
         ? iOSText(string, style, align)
         : androidText(string, style, align);
+  }
+
+  static Future alert({@required BuildContext context})  {
+    return showDialog(
+        context: context,
+        builder: (context) {
+          return isIOS()
+              ? iOSErrorAlert(context: context)
+              : androidErrorAlert(context: context);
+          }
+    );
   }
 
   // Android Material
@@ -39,6 +50,26 @@ class Adaptive {
     );
   }
 
+  static androidErrorAlert({@required BuildContext context}) {
+    return AlertDialog(
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          text(string: "Une erreur est apparue"),
+        ],
+      ),
+      actions: <Widget>[
+        RaisedButton(
+          child: text(string: 'OK'),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
+  }
+
+
 
   // IOS Material
   static CupertinoPageScaffold iOSScaffold(String string, Widget body) {
@@ -53,7 +84,24 @@ class Adaptive {
         style: style,
         child: Text(string, textAlign: align ?? TextAlign.left,)
     );
-    
+  }
+
+  static iOSErrorAlert({@required BuildContext context}) {
+    return CupertinoAlertDialog(
+      content: Column(
+        children: <Widget>[
+          text(string: "Erreur")
+        ],
+      ),
+      actions: <Widget>[
+        CupertinoButton(
+            child: text(string: 'OK'),
+            onPressed: () {
+              Navigator.of(context).pop();
+            }
+        )
+      ],
+    );
   }
 
   // Both Material
@@ -61,11 +109,7 @@ class Adaptive {
     return TextStyle(
       color: color ?? Colors.black,
       fontSize: size ?? 20,
-
-
     );
-
-
   }
 
 }

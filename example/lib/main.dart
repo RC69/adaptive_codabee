@@ -34,6 +34,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Adaptive.scaffold(
         string: "Test",
-        body: Center(child: Adaptive.text(string: "${Adaptive.isIOS()}", color: Colors.pink)));
+        body: Center(child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Adaptive.text(string: "${Adaptive.isIOS()}", color: Colors.pink),
+            RaisedButton(
+              child: Adaptive.text(string: "Press me"),
+              onPressed: () {
+                Adaptive.alert(context: context);
+              },
+            )
+          ],
+        ),
+        )
+    );
   }
 }
