@@ -10,7 +10,7 @@ Pour utiliser ce package, ajouter au `pubspec.yaml`:
 dependencies:
   flutter:
     sdk: flutter
-  adaptive_codabee_rc: ^0.0.1
+  adaptive_codabee_rc: ^1.0.0
 ```
 
 
