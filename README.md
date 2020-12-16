@@ -19,7 +19,7 @@ dependencies:
 Dans le fichier Dart, importer:
 
 ```dart
-import 'package:adaptive_codabee_rc/adaptive_codabee.dart';
+import 'package:adaptive_codabee_rc/adaptive_codabee_rc.dart';
 ```
 
 ## -- FOR TEST -- Do not use -- Udemy course --

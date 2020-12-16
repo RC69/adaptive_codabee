@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:adaptive_codabee_rc/adaptive_codabee.dart';
+import 'package:adaptive_codabee_rc/adaptive_codabee_rc.dart';
 
 void main() {
   runApp(MyApp());
