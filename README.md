@@ -3,7 +3,7 @@
 Apprendre à créer un package qui s'adapte selon l'OS utilisé.
 Ce package est destiné à la création d'applications [Flutter](https://flutter.io)
 
-![SreenShot-Android](/screenshots/Screenshot_1608238179.png)
+![SreenShot](/screenshots/Screenshot_1608238179.png)
 
 ## Getting Started
 
