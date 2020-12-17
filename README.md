@@ -12,7 +12,7 @@ Pour utiliser ce package, ajouter au `pubspec.yaml`:
 dependencies:
   flutter:
     sdk: flutter
-  adaptive_codabee_rc: ^1.0.0
+  adaptive_codabee_rc: ^1.0.1
 ```
 
 
@@ -22,6 +22,47 @@ Dans le fichier Dart, importer:
 
 ```dart
 import 'package:adaptive_codabee_rc/adaptive_codabee_rc.dart';
+```
+
+Intégrer un Scaffold
+
+```dart
+  Widget build(BuildContext context) {
+    return Adaptive.scaffold(
+        string: "Notre package importé",
+        body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Adaptive.text(
+                    string: "Notre application s'adapte aotomatiquement",
+                    color: Colors.red,
+                    size: 25,
+                    align: TextAlign.center
+                ),
+                Adaptive.button(
+                    child: Adaptive.text(string: "Press me"),
+                    onPressed: () {
+                      /// Effectuer une action
+                      print("test");
+                    }),
+                Adaptive.button(
+                    child: Adaptive.text(string: "Montre l'alerte"),
+                    onPressed: () {
+                      Adaptive.alert(
+                          context: context,
+                          callback: () {
+                            Navigator.of(context).pop();
+                          }
+                      );
+                    }),
+              ],
+            )
+        ),
+    );
+  }
+}
+
 ```
 
 ## -- FOR TEST -- Do not use -- Udemy course --
